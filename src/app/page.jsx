@@ -3,6 +3,9 @@ import AboutEditorialSection from "@/components/Home/AboutSection";
 import CoreServicesSection from "@/components/Home/CoreServicesSection";
 import WhyChooseUsSection from "@/components/Home/WhyChooseUsSection";
 import IndustriesWeServe from "@/components/Home/IndustriesWeServe";
+import CTA from "@/components/Home/CTA";
+import "./globals.css";
+
 
 export const metadata = {
   title: "V.K. Electricals Private Limited - Electrical Solutions & Services",
@@ -29,6 +32,7 @@ export default function Home() {
       <CoreServicesSection />
       <WhyChooseUsSection />
       <IndustriesWeServe />
+      <CTA />
     </main>
   );
 }

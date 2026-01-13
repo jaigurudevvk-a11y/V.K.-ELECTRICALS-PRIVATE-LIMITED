@@ -1,50 +1,55 @@
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import "./globals.css";
 import { Montserrat } from "next/font/google";
-import Footer from "@/components/Footer";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "500", "600"],
+  weight: ["100", "200", "300", "400", "500", "600"],
   variable: "--font-montserrat",
   display: "swap",
 });
 
 export const metadata = {
-  metadataBase: new URL("https://vkelectricalspvt.com"),
+  metadataBase: new URL("https://v-k-electricals.vercel.app"),
 
   title: {
-    default: "V.K. Electricals Private Limited | Electrical Solutions & Services",
-    template: "%s | V.K. Electricals Pvt Ltd",
+    default:
+      "V K Electricals – Professional Electrical Services & Supplies in India",
+    template: "%s | V K Electricals",
   },
 
   description:
-    "V.K. Electricals Private Limited offers top-quality electrical solutions and services for residential, commercial, and industrial projects. Reliability and customer satisfaction guaranteed.",
+    "V K Electricals provides expert electrical installation, wiring, cable jointing, testing, maintenance, and electrical supplies for residential, commercial, and industrial clients across India.",
 
   keywords: [
-    "V.K. Electricals",
-    "electrical services",
-    "residential electrical solutions",
+    "electrical services India",
+    "electrical contractors",
+    "electrical wiring services",
+    "cable jointing services",
+    "HT LT cable termination",
+    "electrical testing services",
+    "electrical supplies wholesale",
     "commercial electrical solutions",
     "industrial electrical services",
-    "electrical contractors",
   ],
 
-  authors: [{ name: "V.K. Electricals Private Limited" }],
-  creator: "V.K. Electricals Private Limited",
+  authors: [{ name: "V K Electricals" }],
+  creator: "V K Electricals",
+  publisher: "V K Electricals",
 
   openGraph: {
-    title: "V.K. Electricals Private Limited | Electrical Solutions & Services",
+    title: "V K Electricals – Electrical Services & Supplies",
     description:
-      "Providing modern, reliable, and high-quality electrical services for homes, businesses, and industries.",
-    url: "https://vkelectricalspvt.com",
-    siteName: "V.K. Electricals Private Limited",
+      "Trusted electrical installation, wiring, cable jointing, testing, and electrical supplies delivered by experienced professionals across India.",
+    url: "/",
+    siteName: "V K Electricals",
     images: [
       {
-        url: "/favicon.png",
-        width: 512,
-        height: 512,
-        alt: "V.K. Electricals Logo",
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "V K Electricals",
       },
     ],
     locale: "en_IN",
@@ -53,10 +58,10 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "V.K. Electricals Private Limited | Electrical Solutions & Services",
+    title: "V K Electricals – Professional Electrical Services",
     description:
-      "Reliable electrical services for residential, commercial, and industrial projects.",
-    images: ["/favicon.png"],
+      "Reliable electrical installation, wiring, cable jointing, and testing services for residential, commercial, and industrial projects.",
+    images: ["/og-image.png"],
   },
 
   robots: {
@@ -72,7 +77,7 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://vkelectricalspvt.com",
+    canonical: "/",
   },
 
   icons: {
