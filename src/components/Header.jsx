@@ -35,7 +35,7 @@ const Header = () => {
         <div className="h-[92px] flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/VK-electricals.png"
+              src="/favicon.png"
               alt="VK Electricals Logo"
               width={45}
               height={40}
@@ -76,7 +76,9 @@ const Header = () => {
           {/* Mobile Toggle */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden text-white"
+            className={`lg:hidden ${
+              isScrolled ? "text-orange-400" : "text-white"
+            } `}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

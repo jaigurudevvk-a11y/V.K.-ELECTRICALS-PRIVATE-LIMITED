@@ -4,6 +4,23 @@ import CoreServicesSection from "@/components/Home/CoreServicesSection";
 import WhyChooseUsSection from "@/components/Home/WhyChooseUsSection";
 import IndustriesWeServe from "@/components/Home/IndustriesWeServe";
 
+export const metadata = {
+  title: "V.K. Electricals Private Limited - Electrical Solutions & Services",
+  description:
+    "V.K. Electricals Private Limited provides top-notch electrical solutions and services for residential, commercial, and industrial projects. Quality, reliability, and customer satisfaction guaranteed.",
+  keywords: [
+    "V.K. Electricals",
+    "electrical services",
+    "residential electrical solutions",
+    "commercial electrical solutions",
+    "industrial electrical services",
+    "electrical contractors",
+  ],
+  alternates: {
+    canonical: "https://vkelectricalspvt.com/",
+  },
+};
+
 export default function Home() {
   return (
     <main className="true">

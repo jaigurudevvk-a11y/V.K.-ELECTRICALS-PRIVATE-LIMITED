@@ -2,103 +2,116 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Linkedin, Facebook, Youtube, ChevronUp } from "lucide-react";
+import { ChevronUp } from "lucide-react";
+import { MapPinIcon, PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#2f2f2f] text-[#cfcfcf]">
-      {/* ===== TOP SECTION ===== */}
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 pt-12 lg:pt-14 pb-10">
-        <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr_auto] gap-8 lg:gap-12 items-center">
-          {/* Logo */}
-          <Link
-            href="/"
-            className="flex items-center justify-center lg:justify-start gap-3"
-          >
-            <Image
-              src="/VK-electricals.png"
-              alt="VK Electricals Logo"
-              width={42}
-              height={42}
-              className="object-contain"
-            />
-            <span className="text-white font-semibold tracking-wider text-lg whitespace-nowrap leading-none relative top-[1px]">
-              V.K. ELECTRICALS
-            </span>
-          </Link>
+    <footer className="bg-gradient-to-b from-[#0b1220] to-[#0a1020] text-gray-300">
+      {/* ===== MAIN FOOTER ===== */}
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-14">
+          {/* ===== LEFT: BRAND ===== */}
+          <div>
+            <Link href="/" className="flex items-center gap-3 mb-4">
+              <Image
+                 src="/favicon.png" // V.K. ELECTRICALS logo
+                alt="V.K. ELECTRICALS Logo"
+                width={42}
+                height={42}
+                className="object-contain"
+              />
+              <div>
+                <p className="text-white font-semibold tracking-wider text-lg leading-none">
+                  V.K. ELECTRICALS
+                </p>
+                <p className="text-xs text-gray-400 mt-1">Indore, Madhya Pradesh</p>
+              </div>
+            </Link>
 
-          {/* Navigation */}
-          <nav className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm">
-            <Link href="/" className="hover:text-white transition">
-              Home
-            </Link>
-            <Link href="/services" className="hover:text-white transition">
-              Services
-            </Link>
-            <Link href="/about" className="hover:text-white transition">
-              About Us
-            </Link>
-            <Link href="/contact" className="hover:text-white transition">
-              Contact
-            </Link>
-          </nav>
+            <p className="text-sm text-gray-400 leading-relaxed max-w-[420px]">
+              Expert electrical installation, wiring, cable jointing, testing, maintenance, and quality electrical supplies for residential, commercial, and industrial projects across India.
+            </p>
+          </div>
 
-          {/* Social Icons */}
-          <div className="flex justify-center lg:justify-end gap-6">
-            <Link href="#" aria-label="LinkedIn">
-              <Linkedin className="w-5 h-5 hover:text-white transition" />
-            </Link>
-            <Link href="#" aria-label="Facebook">
-              <Facebook className="w-5 h-5 hover:text-white transition" />
-            </Link>
-            <Link href="#" aria-label="YouTube">
-              <Youtube className="w-5 h-5 hover:text-white transition" />
-            </Link>
+          {/* ===== CENTER: QUICK LINKS ===== */}
+          <div className="md:pl-6 lg:pl-10">
+            <p className="text-white font-semibold mb-5">Quick Links</p>
+
+            <ul className="space-y-3 text-sm text-gray-400">
+              <li>
+                <Link href="/" className="hover:text-orange-400 transition">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="hover:text-orange-400 transition"
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="hover:text-orange-400 transition">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="hover:text-orange-400 transition"
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* ===== RIGHT: CONTACT INFO ===== */}
+          <div>
+            <p className="text-white font-semibold mb-5">Contact Info</p>
+
+            <div className="space-y-4 text-sm text-gray-400">
+              {/* Address */}
+              <div className="flex gap-3">
+                <MapPinIcon className="w-5 h-5 mt-1 text-orange-400 flex-shrink-0" />
+                <p className="leading-relaxed">
+                  Building No./Flat No.: 70B, 71B, 81B, 82B <br /> Royal Town
+                  Colony, Mhow Goan <br /> Dr. Ambedkar Nagar, Indore (M.P.) –
+                  453441
+                </p>
+              </div>
+
+              {/* Phone */}
+              <div className="flex gap-3">
+                <PhoneIcon className="w-5 h-5 mt-1 text-orange-400 flex-shrink-0" />
+                <div className="space-y-1">
+                  <span>+91 93005 50509</span>
+                  <br />
+                  <span>+91 89622 97950</span>
+                </div>
+              </div>
+
+              {/* Email */}
+              <div className="flex gap-3">
+                <EnvelopeIcon className="w-5 h-5 mt-1 text-orange-400 flex-shrink-0" />
+                <span>jaigurudev.vk@gmail.com</span>
+              </div>
+            </div>
           </div>
         </div>
+
+        {/* Divider */}
+        <div className="border-t border-white/10 mt-12 pt-6 text-center text-xs text-gray-400">
+  © {new Date().getFullYear()}{" "}
+  <span className="text-white font-medium">V.K. ELECTRICALS</span>. All
+  rights reserved.
+</div>
+
       </div>
 
-      {/* Divider */}
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="border-t border-white/20" />
-      </div>
-
-      {/* ===== BOTTOM SECTION ===== */}
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-6 items-center text-sm">
-          {/* Policy Links */}
-          {/* <div className="flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-3">
-            <Link href="/disclaimer" className="hover:text-white transition">
-              Disclaimer
-            </Link>
-            <Link href="/hse-policies" className="hover:text-white transition">
-              HSE Policies & Documents
-            </Link>
-            <Link
-              href="/quality-policy"
-              className="hover:text-white transition"
-            >
-              Quality Policy
-            </Link>
-            <Link
-              href="/privacy-policy"
-              className="hover:text-white transition"
-            >
-              Privacy Policy
-            </Link>
-            <Link href="/sitemap" className="hover:text-white transition">
-              Sitemap
-            </Link>
-          </div> */}
-
-          {/* Copyright */}
-          <div className="text-center lg:text-right text-[#bdbdbd]">
-            © 2026 V.K. Electricals Pvt. Ltd.
-          </div>
-        </div>
-      </div>
-
-      {/* Scroll To Top */}
+      {/* ===== SCROLL TO TOP ===== */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-sm shadow-lg transition"
